@@ -101,7 +101,6 @@ module Mosaico
 
       Mosaico::Engine.config.placeholder_backend = Mosaico::LocalPlaceholderBackend.new
       Mosaico::Engine.config.image_backend = Mosaico::LocalImageBackend.new
-    
 
     end
 
