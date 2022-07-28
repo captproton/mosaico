@@ -1,6 +1,6 @@
 require "bundler/gem_tasks"
 
-desc "Fix css conflict between rails and mosaico editor "
+desc "Mosaico: Fix css conflict between rails and mosaico editor "
 task :fix_css do
   # Task goes here
   #   
