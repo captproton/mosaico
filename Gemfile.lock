@@ -2,7 +2,11 @@ PATH
   remote: .
   specs:
     mosaico (0.1.0)
+      cssbundling-rails
+      jsbundling-rails
       rails (>= 7.0.3.1)
+      stimulus-rails
+      turbo-rails
 
 GEM
   remote: https://rubygems.org/
@@ -90,6 +94,8 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    cssbundling-rails (1.1.1)
+      railties (>= 6.0.0)
     daemons (1.4.1)
     debug_inspector (1.1.0)
     diff-lcs (1.5.0)
@@ -125,6 +131,8 @@ GEM
       rspec (>= 2.99.0, < 4.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
+    jsbundling-rails (1.0.3)
+      railties (>= 6.0.0)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -234,6 +242,8 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    stimulus-rails (1.1.0)
+      railties (>= 6.0.0)
     strscan (3.0.4)
     thin (1.8.1)
       daemons (~> 1.0, >= 1.0.9)
@@ -241,6 +251,10 @@ GEM
       rack (>= 1, < 3)
     thor (1.2.1)
     timeout (0.3.0)
+    turbo-rails (1.1.1)
+      actionpack (>= 6.0.0)
+      activejob (>= 6.0.0)
+      railties (>= 6.0.0)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     webrick (1.7.0)
@@ -260,17 +274,21 @@ DEPENDENCIES
   awesome_print
   binding_of_caller
   capybara
+  cssbundling-rails (~> 1.1)
   factory_bot_rails
   ffaker
   guard-rails
   guard-rspec
+  jsbundling-rails (~> 1.0)
   mosaico!
   pg
   pry-doc
   pry-rails
   rspec-rails
   sprockets-rails
+  stimulus-rails (~> 1.1)
   thin
+  turbo-rails (~> 1.1)
 
 BUNDLED WITH
    2.3.19
