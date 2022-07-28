@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <%= javascript_include_tag "mosaico/application" %>
-    <%= translations_include_tag %>
-    <%= stylesheet_link_tag "mosaico/application" %>
-    <%= csrf_meta_tag %>
-  </head>
+<head>
+  <title>Mosaico</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag    "mosaico/application", media: "all" %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
 </html>

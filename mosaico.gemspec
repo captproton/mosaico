@@ -1,22 +1,26 @@
-$:.push File.expand_path('../lib', __FILE__)
-require 'mosaico/version'
+require_relative "lib/mosaico/version"
 
-Gem::Specification.new do |s|
-  s.name          = 'mosaico'
-  s.summary       = 'The Mosaico email editor on Rails.'
-  s.description   = s.summary
-  s.authors       = ['Cameron Dutro']
-  s.email         = ['cameron@lumoslabs.com']
-  s.homepage      = 'https://github.com/lumoslabs/mosaico-rails'
+Gem::Specification.new do |spec|
+  spec.name        = "mosaico"
+  spec.version     = Mosaico::VERSION
+  spec.authors     = ["captproton"]
+  spec.email       = ["carl@wdwhub.net"]
+  spec.homepage    = "https://github.com/lumoslabs/mosaico-rails"
+  spec.summary     = "The Mosaico email editor on Rails." 
+  spec.description = "Mosaico is a Javascript-based email editor written by Void Labs. This project is an attempt to put it on Rails."
+    spec.license     = "MIT"
+  
+  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
+  # to allow pushing to a single host or delete this section to allow pushing to any host.
+  
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files ./spec`.split("\n")
-  s.require_paths = ['lib']
-  s.version       = Mosaico::VERSION
+  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["source_code_uri"] = "https://github.com/captproton/mosaico-rails"
+  spec.metadata["changelog_uri"] = "https://github.com/captproton/mosaico-rails/blob/main/CHANGELOG.md"
 
-  s.add_dependency 'css-rewrite', '~> 2.0'
-  s.add_dependency 'generated-assets', '~> 2.0'
-  s.add_dependency 'mini_magick'
-  s.add_dependency 'mime-types'
-  s.add_dependency 'rails', '>= 4.0'
+  spec.files = Dir.chdir(File.expand_path(__dir__)) do
+    Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  end
+
+  spec.add_dependency "rails", ">= 7.0.3.1"
 end
