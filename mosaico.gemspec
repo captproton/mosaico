@@ -19,8 +19,14 @@ Gem::Specification.new do |spec|
   spec.metadata["changelog_uri"] = "https://github.com/captproton/mosaico-rails/blob/main/CHANGELOG.md"
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
+  spec.test_files = Dir["spec/**/*"]
     Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   end
 
   spec.add_dependency "rails", ">= 7.0.3.1"
+
+  spec.add_development_dependency 'rspec-rails'
+  spec.add_development_dependency 'capybara'
+  spec.add_development_dependency 'factory_bot_rails'
+  spec.add_development_dependency 'ffaker'
 end
