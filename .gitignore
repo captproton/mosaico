@@ -7,6 +7,7 @@
 /spec/dummy/storage/
 /spec/dummy/tmp/
 spec/dummy/app/assets/builds/
+Gemfile.lock
 
 # engine-specific
 vendor/assets/mosaico-0.16.0/mosaico/package-lock.json
