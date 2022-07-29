@@ -23,8 +23,14 @@ Gem::Specification.new do |spec|
     Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   end
 
-  spec.add_dependency "rails", ">= 7.0.3.1"
-  spec.add_dependency "css-rewrite", "~> 2.0"
+
+  spec.files         = `git ls-files`.split("\n")
+  spec.test_files    = `git ls-files ./spec`.split("\n")
+  spec.require_paths = ['lib']
+
+  spec.add_dependency "rails", ">= 7.0"
+  # spec.add_dependency "css-rewrite", "~> 2.0"
+
   spec.add_dependency "generated-assets", "~> 2.0"
   spec.add_dependency "mini_magick"
   spec.add_dependency "mime-types"
