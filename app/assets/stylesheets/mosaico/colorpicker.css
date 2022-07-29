@@ -1,0 +1,5 @@
+/* make colorpicker links visible */
+.mo a:link,
+.mo a:visited {
+    color: initial;
+    }

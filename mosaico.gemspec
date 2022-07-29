@@ -3,8 +3,8 @@ require_relative "lib/mosaico/version"
 Gem::Specification.new do |spec|
   spec.name        = "mosaico"
   spec.version     = Mosaico::VERSION
-  spec.authors     = ["captproton"]
-  spec.email       = ["carl@wdwhub.net"]
+  spec.authors     = ["captproton", "Cameron Dutro"]
+  spec.email       = ["carl@wdwhub.net", "cameron@lumoslabs.com"]
   spec.homepage    = "https://github.com/lumoslabs/mosaico-rails"
   spec.summary     = "The Mosaico email editor on Rails." 
   spec.description = "Mosaico is a Javascript-based email editor written by Void Labs. This project is an attempt to put it on Rails."
@@ -23,24 +23,34 @@ Gem::Specification.new do |spec|
     Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   end
 
-  spec.add_dependency "rails", ">= 7.0.3.1"
 
-  spec.add_development_dependency 'rspec-rails'
-  spec.add_development_dependency 'capybara'
-  spec.add_development_dependency 'factory_bot_rails'
-  spec.add_development_dependency 'ffaker'
+  spec.files         = `git ls-files`.split("\n")
+  spec.test_files    = `git ls-files ./spec`.split("\n")
+  spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'guard-rspec'
-  spec.add_development_dependency 'guard-rails'
+  spec.add_dependency "rails", ">= 7.0"
+  # spec.add_dependency "css-rewrite", "~> 2.0"
 
-  spec.add_development_dependency 'thin'
-  spec.add_development_dependency 'pry-doc'
-  spec.add_development_dependency 'pry-rails'
-  spec.add_development_dependency 'awesome_print'
-  spec.add_development_dependency 'binding_of_caller'
+  spec.add_dependency "generated-assets", "~> 2.0"
+  spec.add_dependency "mini_magick"
+  spec.add_dependency "mime-types"
 
-  spec.add_dependency 'jsbundling-rails'
-  spec.add_dependency 'cssbundling-rails'
-  spec.add_dependency 'stimulus-rails'
-  spec.add_dependency 'turbo-rails'
+  spec.add_development_dependency "rspec-rails"
+  spec.add_development_dependency "capybara"
+  spec.add_development_dependency "factory_bot_rails"
+  spec.add_development_dependency "ffaker"
+
+  spec.add_development_dependency "guard-rspec"
+  spec.add_development_dependency "guard-rails"
+
+  spec.add_development_dependency "thin"
+  spec.add_development_dependency "pry-doc"
+  spec.add_development_dependency "pry-rails"
+  spec.add_development_dependency "awesome_print"
+  spec.add_development_dependency "binding_of_caller"
+
+  spec.add_dependency "jsbundling-rails"
+  spec.add_dependency "cssbundling-rails"
+  spec.add_dependency "stimulus-rails"
+  spec.add_dependency "turbo-rails"
 end
