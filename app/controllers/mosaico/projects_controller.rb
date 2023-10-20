@@ -14,7 +14,7 @@ module Mosaico
 
     def update
       project = Mosaico::Project.find(params[:id])
-      project.update_attributes(project_params)
+      project.update(project_params)
       render json: { project_id: project.id }, status: :ok
     end
 
